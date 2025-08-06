@@ -21,12 +21,34 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('vendorChart')) {
         initializeVendorChart();
     }
+    
+    // Add fallback styling if Bootstrap CSS didn't load
+    checkAndApplyFallbacks();
 });
 
-// Sample chart functions (with error handling for missing Chart.js)
+// Check if external resources loaded and apply fallbacks if needed
+function checkAndApplyFallbacks() {
+    // Check if Bootstrap CSS loaded by testing for a Bootstrap class
+    var testElement = document.createElement('div');
+    testElement.className = 'container';
+    testElement.style.display = 'none';
+    document.body.appendChild(testElement);
+    
+    var hasBootstrap = window.getComputedStyle(testElement).maxWidth !== 'none';
+    document.body.removeChild(testElement);
+    
+    if (!hasBootstrap) {
+        console.warn('Bootstrap CSS not loaded, using fallback styles');
+        // Add a class to indicate fallback mode
+        document.body.classList.add('fallback-mode');
+    }
+}
+
+// Sample chart functions (with better error handling and placeholders)
 function initializeSeverityChart() {
     if (typeof Chart === 'undefined') {
-        console.warn('Chart.js not loaded, skipping chart initialization');
+        console.warn('Chart.js not loaded, showing placeholder');
+        showChartPlaceholder('severityChart', 'Vulnerabilities by Severity', 'Chart requires external resources to display');
         return;
     }
     
@@ -60,7 +82,8 @@ function initializeSeverityChart() {
 
 function initializeTimelineChart() {
     if (typeof Chart === 'undefined') {
-        console.warn('Chart.js not loaded, skipping chart initialization');
+        console.warn('Chart.js not loaded, showing placeholder');
+        showChartPlaceholder('timelineChart', 'Advisory Timeline', 'Chart requires external resources to display');
         return;
     }
     
@@ -92,7 +115,8 @@ function initializeTimelineChart() {
 
 function initializeVendorChart() {
     if (typeof Chart === 'undefined') {
-        console.warn('Chart.js not loaded, skipping chart initialization');
+        console.warn('Chart.js not loaded, showing placeholder');
+        showChartPlaceholder('vendorChart', 'Top Affected Vendors', 'Chart requires external resources to display');
         return;
     }
     
@@ -118,6 +142,28 @@ function initializeVendorChart() {
             }
         }
     });
+}
+
+// Show chart placeholder when Chart.js is not available
+function showChartPlaceholder(canvasId, title, message) {
+    const canvas = document.getElementById(canvasId);
+    if (!canvas) return;
+    
+    // Create placeholder div
+    const placeholder = document.createElement('div');
+    placeholder.className = 'chart-placeholder';
+    placeholder.innerHTML = `
+        <div>
+            <div style="font-weight: 600; margin-bottom: 0.5rem;">${title}</div>
+            <div style="font-size: 0.9rem;">${message}</div>
+            <div style="font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7;">
+                Data: Critical: 25, High: 45, Medium: 30, Low: 15
+            </div>
+        </div>
+    `;
+    
+    // Replace canvas with placeholder
+    canvas.parentNode.replaceChild(placeholder, canvas);
 }
 
 // CSV download functionality
