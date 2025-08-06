@@ -14,7 +14,7 @@
                 <ul class="navbar-nav ms-auto">
                     {% for item in site.navigation %}
                     <li class="nav-item">
-                        <a class="nav-link {% if page.url == item.url %}active{% endif %}" href="{{ item.url | relative_url }}">
+                        <a class="nav-link {% if page.url == item.url or page.url == item.url | relative_url %}active{% endif %}" href="{{ item.url | relative_url }}">
                             {{ item.title }}
                         </a>
                     </li>

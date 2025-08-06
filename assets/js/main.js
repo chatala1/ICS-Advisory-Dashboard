@@ -1,11 +1,13 @@
 // Main JavaScript for ICS Advisory Dashboard
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
+    // Initialize tooltips (with error handling for missing Bootstrap)
+    if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    }
 
     // Initialize sample charts if on dashboards page
     if (document.getElementById('severityChart')) {
@@ -21,8 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Sample chart functions
+// Sample chart functions (with error handling for missing Chart.js)
 function initializeSeverityChart() {
+    if (typeof Chart === 'undefined') {
+        console.warn('Chart.js not loaded, skipping chart initialization');
+        return;
+    }
+    
     const ctx = document.getElementById('severityChart').getContext('2d');
     new Chart(ctx, {
         type: 'doughnut',
@@ -52,6 +59,11 @@ function initializeSeverityChart() {
 }
 
 function initializeTimelineChart() {
+    if (typeof Chart === 'undefined') {
+        console.warn('Chart.js not loaded, skipping chart initialization');
+        return;
+    }
+    
     const ctx = document.getElementById('timelineChart').getContext('2d');
     new Chart(ctx, {
         type: 'line',
@@ -79,6 +91,11 @@ function initializeTimelineChart() {
 }
 
 function initializeVendorChart() {
+    if (typeof Chart === 'undefined') {
+        console.warn('Chart.js not loaded, skipping chart initialization');
+        return;
+    }
+    
     const ctx = document.getElementById('vendorChart').getContext('2d');
     new Chart(ctx, {
         type: 'bar',
