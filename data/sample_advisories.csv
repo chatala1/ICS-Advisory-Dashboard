@@ -1,0 +1,11 @@
+Advisory ID,Title,Vendor,Products,CVSS Score,Severity,Publication Date,CVE IDs,Description
+ICSA-24-030-01,Siemens SIMATIC Products,Siemens,"SIMATIC S7-1200, SIMATIC S7-1500",9.8,Critical,2024-01-30,"CVE-2024-1234, CVE-2024-1235","Multiple vulnerabilities affecting SIMATIC S7-1200 and S7-1500 CPUs that could allow remote code execution"
+ICSA-24-029-02,Schneider Electric PowerLogic,Schneider Electric,PowerLogic PM8000,8.1,High,2024-01-29,CVE-2024-1236,"Authentication bypass vulnerability in PowerLogic PM8000 series power meters"
+ICSA-24-028-03,Rockwell Automation FactoryTalk,Rockwell Automation,FactoryTalk View SE,6.5,Medium,2024-01-28,CVE-2024-1237,"Cross-site scripting vulnerability in FactoryTalk View SE web interface"
+ICSA-24-027-01,GE Digital iFIX,General Electric,iFIX SCADA,7.8,High,2024-01-27,"CVE-2024-1238, CVE-2024-1239","Buffer overflow vulnerabilities in iFIX SCADA software could lead to remote code execution"
+ICSA-24-026-04,Honeywell Experion PKS,Honeywell,Experion PKS,4.3,Low,2024-01-26,CVE-2024-1240,"Information disclosure vulnerability in Experion PKS web interface"
+ICSA-24-025-02,Emerson DeltaV,Emerson,DeltaV Distributed Control System,8.8,High,2024-01-25,"CVE-2024-1241, CVE-2024-1242","Multiple vulnerabilities in DeltaV workstations allowing privilege escalation"
+ICSA-24-024-01,ABB System 800xA,ABB,System 800xA,7.2,High,2024-01-24,CVE-2024-1243,"SQL injection vulnerability in System 800xA web components"
+ICSA-24-023-05,Mitsubishi Electric MELSEC,Mitsubishi Electric,"MELSEC iQ-R, MELSEC iQ-L",5.9,Medium,2024-01-23,CVE-2024-1244,"Denial of service vulnerability affecting MELSEC programmable controllers"
+ICSA-24-022-03,Yokogawa CENTUM,Yokogawa,CENTUM VP,6.8,Medium,2024-01-22,CVE-2024-1245,"Path traversal vulnerability in CENTUM VP engineering workstation"
+ICSA-24-021-01,Aveva System Platform,Aveva,System Platform,9.1,Critical,2024-01-21,"CVE-2024-1246, CVE-2024-1247","Remote code execution vulnerabilities in Aveva System Platform"

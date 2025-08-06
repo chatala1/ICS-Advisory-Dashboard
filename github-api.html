@@ -1,0 +1,360 @@
+---
+layout: page
+title: GitHub & API Documentation
+description: Access our GitHub repository and API documentation for developers
+---
+
+<div class="container">
+    <!-- GitHub Repository Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body text-center p-5">
+                    <div class="feature-icon text-primary">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h2>GitHub Repository</h2>
+                    <p class="lead text-muted mb-4">
+                        Access the complete source code, documentation, and contribute to the ICS Advisory Dashboard project
+                    </p>
+                    <div class="d-flex gap-3 justify-content-center flex-wrap">
+                        <a href="https://github.com/chatala1/ICS-Advisory-Dashboard" class="btn btn-primary btn-lg" target="_blank">
+                            <i class="fab fa-github me-2"></i>View Repository
+                        </a>
+                        <a href="https://github.com/chatala1/ICS-Advisory-Dashboard/issues" class="btn btn-outline-primary btn-lg" target="_blank">
+                            <i class="fas fa-bug me-2"></i>Report Issues
+                        </a>
+                        <a href="https://github.com/chatala1/ICS-Advisory-Dashboard/fork" class="btn btn-outline-secondary btn-lg" target="_blank">
+                            <i class="fas fa-code-branch me-2"></i>Fork Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Repository Stats -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fas fa-star fa-2x text-warning mb-2"></i>
+                    <h4>45</h4>
+                    <small class="text-muted">Stars</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fas fa-code-branch fa-2x text-info mb-2"></i>
+                    <h4>12</h4>
+                    <small class="text-muted">Forks</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fas fa-users fa-2x text-success mb-2"></i>
+                    <h4>8</h4>
+                    <small class="text-muted">Contributors</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fas fa-exclamation-circle fa-2x text-danger mb-2"></i>
+                    <h4>3</h4>
+                    <small class="text-muted">Open Issues</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Documentation -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="text-primary mb-4">
+                <i class="fas fa-code me-2"></i>
+                API Documentation
+            </h2>
+        </div>
+    </div>
+
+    <!-- API Endpoints -->
+    <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-server me-2"></i>
+                        REST API Endpoints
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <h6>Base URL</h6>
+                    <code class="d-block bg-light p-2 rounded mb-3">https://api.ics-dashboard.org/v1/</code>
+                    
+                    <h6>Available Endpoints</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <span class="badge bg-success me-2">GET</span>
+                            <code>/advisories</code> - List all advisories
+                        </li>
+                        <li class="mb-2">
+                            <span class="badge bg-success me-2">GET</span>
+                            <code>/advisories/{id}</code> - Get specific advisory
+                        </li>
+                        <li class="mb-2">
+                            <span class="badge bg-success me-2">GET</span>
+                            <code>/vendors</code> - List all vendors
+                        </li>
+                        <li class="mb-2">
+                            <span class="badge bg-success me-2">GET</span>
+                            <code>/stats</code> - Get dashboard statistics
+                        </li>
+                        <li class="mb-2">
+                            <span class="badge bg-success me-2">GET</span>
+                            <code>/search</code> - Search advisories
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-key me-2"></i>
+                        Authentication
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">Currently, the API is read-only and does not require authentication. Rate limiting is applied:</p>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Rate Limit</th>
+                                    <th>Requests</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Per minute</td>
+                                    <td>100 requests</td>
+                                </tr>
+                                <tr>
+                                    <td>Per hour</td>
+                                    <td>1,000 requests</td>
+                                </tr>
+                                <tr>
+                                    <td>Per day</td>
+                                    <td>10,000 requests</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="alert alert-info" role="alert">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Coming Soon:</strong> API key authentication for higher rate limits
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Examples -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">API Usage Examples</h3>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0">Get All Advisories</h6>
+                </div>
+                <div class="card-body">
+                    <h6>Request</h6>
+                    <pre class="bg-light p-3 rounded"><code>curl -X GET "https://api.ics-dashboard.org/v1/advisories" \
+  -H "Accept: application/json"</code></pre>
+                    
+                    <h6>Response</h6>
+                    <pre class="bg-light p-3 rounded"><code>{
+  "data": [
+    {
+      "id": "ICSA-24-030-01",
+      "title": "Siemens SIMATIC Products",
+      "vendor": "Siemens",
+      "products": ["SIMATIC S7-1200", "SIMATIC S7-1500"],
+      "cvss_score": 9.8,
+      "severity": "Critical",
+      "published_date": "2024-01-30",
+      "cve_ids": ["CVE-2024-1234", "CVE-2024-1235"]
+    }
+  ],
+  "total": 1247,
+  "page": 1,
+  "per_page": 10
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <h6 class="mb-0">Search Advisories</h6>
+                </div>
+                <div class="card-body">
+                    <h6>Request</h6>
+                    <pre class="bg-light p-3 rounded"><code>curl -X GET "https://api.ics-dashboard.org/v1/search?q=Siemens&severity=Critical" \
+  -H "Accept: application/json"</code></pre>
+                    
+                    <h6>Response</h6>
+                    <pre class="bg-light p-3 rounded"><code>{
+  "data": [
+    {
+      "id": "ICSA-24-030-01",
+      "title": "Siemens SIMATIC Products",
+      "vendor": "Siemens",
+      "severity": "Critical",
+      "cvss_score": 9.8,
+      "published_date": "2024-01-30"
+    }
+  ],
+  "total": 45,
+  "query": "Siemens",
+  "filters": {
+    "severity": "Critical"
+  }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SDKs and Libraries -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">SDKs and Libraries</h3>
+        </div>
+    </div>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fab fa-python fa-3x text-warning mb-3"></i>
+                    <h5>Python SDK</h5>
+                    <p class="text-muted">Official Python library for easy integration</p>
+                    <pre class="text-start"><code>pip install ics-advisory-sdk</code></pre>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-2">
+                        <i class="fab fa-github me-1"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fab fa-js fa-3x text-warning mb-3"></i>
+                    <h5>JavaScript SDK</h5>
+                    <p class="text-muted">NPM package for Node.js and browser applications</p>
+                    <pre class="text-start"><code>npm install ics-advisory-js</code></pre>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-2">
+                        <i class="fab fa-github me-1"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="fab fa-golang fa-3x text-info mb-3"></i>
+                    <h5>Go SDK</h5>
+                    <p class="text-muted">Go module for backend services and CLI tools</p>
+                    <pre class="text-start"><code>go get github.com/ics/advisory-go</code></pre>
+                    <a href="#" class="btn btn-outline-primary btn-sm mt-2">
+                        <i class="fab fa-github me-1"></i>View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Related Resources -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">Related Resources</h3>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-external-link-alt me-2 text-primary"></i>
+                                External APIs
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" target="_blank" class="text-decoration-none">
+                                        <i class="fas fa-link me-2"></i>CISA KEV Catalog API
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="https://nvd.nist.gov/developers" target="_blank" class="text-decoration-none">
+                                        <i class="fas fa-link me-2"></i>NIST NVD API
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="https://cve.mitre.org/" target="_blank" class="text-decoration-none">
+                                        <i class="fas fa-link me-2"></i>MITRE CVE Database
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <i class="fas fa-tools me-2 text-primary"></i>
+                                Integration Tools
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-link me-2"></i>Splunk Add-On for ICS Advisories
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-link me-2"></i>Elastic Security Integration
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="#" class="text-decoration-none">
+                                        <i class="fas fa-link me-2"></i>MISP Threat Intelligence Module
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

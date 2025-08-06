@@ -1,0 +1,110 @@
+/* Custom styles for ICS Advisory Dashboard */
+
+:root {
+  --primary-color: #2c5282;
+  --secondary-color: #3182ce;
+  --accent-color: #e53e3e;
+  --success-color: #38a169;
+  --warning-color: #d69e2e;
+  --info-color: #3182ce;
+  --dark-color: #2d3748;
+  --light-color: #f7fafc;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: none;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: all 0.15s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.dashboard-card {
+  min-height: 300px;
+}
+
+.stats-card {
+  text-align: center;
+  padding: 2rem;
+}
+
+.stats-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+}
+
+.chart-container {
+  position: relative;
+  height: 400px;
+  margin: 2rem 0;
+}
+
+.table-responsive {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  
+  .stats-number {
+    font-size: 2rem;
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+  }
+}

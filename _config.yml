@@ -1,0 +1,54 @@
+# Jekyll configuration for ICS Advisory Dashboard
+title: ICS Advisory Dashboard
+description: >-
+  Open-source initiative to visualize DHS CISA ICS Advisories as interactive dashboards
+  and provide downloadable CSV datasets for vulnerability analysis.
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://chatala1.github.io" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Dashboards
+    url: /dashboards/
+  - title: Summaries
+    url: /summaries/
+  - title: GitHub/API
+    url: /github-api/
+  - title: Vendor Resources
+    url: /vendor-resources/
+  - title: Tools & Resources
+    url: /tools-resources/
+  - title: About
+    url: /about/
+  - title: Contact
+    url: /contact/
+
+# Collections
+collections:
+  data:
+    output: true
+    permalink: /:collection/:name/
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

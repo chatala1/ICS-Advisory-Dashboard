@@ -1,0 +1,290 @@
+---
+layout: page
+title: Contact Us
+description: Get in touch with the ICS Advisory Dashboard team
+---
+
+<div class="container">
+    <!-- Contact Hero -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-5 fw-bold text-primary mb-4">Get in Touch</h1>
+            <p class="lead text-muted">
+                Have questions, suggestions, or want to contribute? We'd love to hear from you. 
+                Reach out through any of the channels below.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contact Methods -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <div class="card-body p-4">
+                    <div class="feature-icon text-primary">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h5>GitHub</h5>
+                    <p class="text-muted mb-4">
+                        The best way to report issues, request features, or contribute code to the project.
+                    </p>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="https://github.com/chatala1/ICS-Advisory-Dashboard/issues" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-bug me-2"></i>Report Issues
+                        </a>
+                        <a href="https://github.com/chatala1/ICS-Advisory-Dashboard/discussions" class="btn btn-outline-primary" target="_blank">
+                            <i class="fas fa-comments me-2"></i>Discussions
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <div class="card-body p-4">
+                    <div class="feature-icon text-info">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h5>Email</h5>
+                    <p class="text-muted mb-4">
+                        For private inquiries, security issues, or partnership opportunities.
+                    </p>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="mailto:contact@ics-dashboard.org" class="btn btn-info">
+                            <i class="fas fa-envelope me-2"></i>General Inquiries
+                        </a>
+                        <a href="mailto:security@ics-dashboard.org" class="btn btn-outline-danger">
+                            <i class="fas fa-shield-alt me-2"></i>Security Issues
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100 text-center">
+                <div class="card-body p-4">
+                    <div class="feature-icon text-success">
+                        <i class="fab fa-slack"></i>
+                    </div>
+                    <h5>Community</h5>
+                    <p class="text-muted mb-4">
+                        Join our community discussions and connect with other users and contributors.
+                    </p>
+                    <div class="d-flex flex-column gap-2">
+                        <a href="#" class="btn btn-success">
+                            <i class="fab fa-slack me-2"></i>Join Slack
+                        </a>
+                        <a href="https://twitter.com/ics_dashboard" class="btn btn-outline-info" target="_blank">
+                            <i class="fab fa-twitter me-2"></i>Follow Updates
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="row mb-5">
+        <div class="col-lg-8 mx-auto">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">
+                        <i class="fas fa-paper-plane me-2"></i>
+                        Send us a Message
+                    </h5>
+                </div>
+                <div class="card-body p-4">
+                    <form id="contactForm">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="organization" class="form-label">Organization (Optional)</label>
+                                <input type="text" class="form-control" id="organization">
+                            </div>
+                            <div class="col-12">
+                                <label for="subject" class="form-label">Subject *</label>
+                                <select class="form-select" id="subject" required>
+                                    <option value="">Select a subject...</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="feature">Feature Request</option>
+                                    <option value="bug">Bug Report</option>
+                                    <option value="data">Data Question</option>
+                                    <option value="partnership">Partnership</option>
+                                    <option value="security">Security Issue</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required placeholder="Please provide as much detail as possible..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">
+                                        Subscribe to project updates and announcements
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                                <button type="reset" class="btn btn-outline-secondary ms-2">
+                                    <i class="fas fa-undo me-2"></i>Reset Form
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="text-primary mb-4 text-center">Frequently Asked Questions</h3>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1">
+                            How often is the advisory data updated?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Our data is automatically updated daily by monitoring CISA's ICS advisory feeds. 
+                            New advisories typically appear on our dashboard within 24 hours of their publication.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2">
+                            Is the data free to use?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes! All data and visualizations are completely free to use. Our project is open-source 
+                            and released under the MIT license, allowing both personal and commercial use.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3">
+                            How can I contribute to the project?
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We welcome contributions! You can contribute by reporting bugs, suggesting features, 
+                            submitting pull requests, improving documentation, or sharing the project with others. 
+                            Check out our GitHub repository for contribution guidelines.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4">
+                            Can I use the API for commercial purposes?
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, our API is available for commercial use under rate limits. For high-volume 
+                            commercial applications, please contact us to discuss partnership opportunities 
+                            and enhanced API access.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5">
+                            How do I report a security vulnerability?
+                        </button>
+                    </h2>
+                    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Please report security vulnerabilities responsibly by emailing security@ics-dashboard.org. 
+                            Do not disclose security issues publicly until we've had a chance to address them. 
+                            We appreciate responsible disclosure and will acknowledge your contribution.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Response Times -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <div class="alert alert-info" role="alert">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <i class="fas fa-clock fa-2x mb-2"></i>
+                        <h6>GitHub Issues</h6>
+                        <small>Response within 2-3 business days</small>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-envelope fa-2x mb-2"></i>
+                        <h6>Email Inquiries</h6>
+                        <small>Response within 3-5 business days</small>
+                    </div>
+                    <div class="col-md-4">
+                        <i class="fas fa-exclamation-triangle fa-2x mb-2"></i>
+                        <h6>Security Issues</h6>
+                        <small>Response within 24 hours</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        organization: document.getElementById('organization').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+        newsletter: document.getElementById('newsletter').checked
+    };
+    
+    // Show success message (in a real implementation, you would send this to a server)
+    alert('Thank you for your message! While this is a demo form, in a real implementation, your message would be sent to the project team. For now, please use the GitHub issues or email addresses provided above.');
+    
+    // Reset form
+    this.reset();
+});
+</script>

@@ -1,0 +1,419 @@
+---
+layout: page
+title: Vendor Resources
+description: Comprehensive directory of ICS vendors and their security resources
+---
+
+<div class="container">
+    <!-- Search and Filter -->
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="fas fa-search"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="Search vendors..." id="vendorSearch">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <select class="form-select" id="sectorFilter">
+                <option value="all">All Sectors</option>
+                <option value="energy">Energy</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="water">Water Systems</option>
+                <option value="transportation">Transportation</option>
+                <option value="healthcare">Healthcare</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Vendor Cards -->
+    <div class="row g-4" id="vendorGrid">
+        <!-- Siemens -->
+        <div class="col-lg-6 vendor-card" data-sector="energy manufacturing">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-industry fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title mb-1">Siemens</h5>
+                            <small class="text-muted">Energy, Manufacturing</small>
+                        </div>
+                        <div class="ms-auto">
+                            <span class="badge bg-danger">35 Advisories</span>
+                        </div>
+                    </div>
+                    
+                    <p class="card-text">
+                        Leading provider of industrial automation and digitalization solutions including SIMATIC controllers, HMI systems, and industrial software.
+                    </p>
+                    
+                    <div class="mb-3">
+                        <h6>Key Products:</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark">SIMATIC S7</span>
+                            <span class="badge bg-light text-dark">WinCC</span>
+                            <span class="badge bg-light text-dark">TIA Portal</span>
+                            <span class="badge bg-light text-dark">SINEC</span>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="https://www.siemens.com/global/en/products/automation/industrial-communication/profinet.html" class="btn btn-sm btn-outline-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Security Portal
+                        </a>
+                        <a href="https://cert-portal.siemens.com/" class="btn btn-sm btn-outline-secondary" target="_blank">
+                            <i class="fas fa-shield-alt me-1"></i>CERT Portal
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-info">
+                            <i class="fas fa-chart-bar me-1"></i>View Advisories
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schneider Electric -->
+        <div class="col-lg-6 vendor-card" data-sector="energy manufacturing">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-bolt fa-2x text-warning"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title mb-1">Schneider Electric</h5>
+                            <small class="text-muted">Energy, Manufacturing</small>
+                        </div>
+                        <div class="ms-auto">
+                            <span class="badge bg-warning">28 Advisories</span>
+                        </div>
+                    </div>
+                    
+                    <p class="card-text">
+                        Global specialist in energy management and automation providing solutions for power distribution, industrial automation, and building management.
+                    </p>
+                    
+                    <div class="mb-3">
+                        <h6>Key Products:</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark">PowerLogic</span>
+                            <span class="badge bg-light text-dark">Unity Pro</span>
+                            <span class="badge bg-light text-dark">Modicon</span>
+                            <span class="badge bg-light text-dark">EcoStruxure</span>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="https://www.se.com/us/en/work/support/cybersecurity/" class="btn btn-sm btn-outline-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Security Center
+                        </a>
+                        <a href="https://www.se.com/us/en/work/support/cybersecurity/security-notifications.jsp" class="btn btn-sm btn-outline-secondary" target="_blank">
+                            <i class="fas fa-bell me-1"></i>Notifications
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-info">
+                            <i class="fas fa-chart-bar me-1"></i>View Advisories
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rockwell Automation -->
+        <div class="col-lg-6 vendor-card" data-sector="manufacturing">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-cogs fa-2x text-info"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title mb-1">Rockwell Automation</h5>
+                            <small class="text-muted">Manufacturing</small>
+                        </div>
+                        <div class="ms-auto">
+                            <span class="badge bg-info">22 Advisories</span>
+                        </div>
+                    </div>
+                    
+                    <p class="card-text">
+                        Industrial automation and information solutions provider specializing in control systems, HMI software, and manufacturing execution systems.
+                    </p>
+                    
+                    <div class="mb-3">
+                        <h6>Key Products:</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark">FactoryTalk</span>
+                            <span class="badge bg-light text-dark">ControlLogix</span>
+                            <span class="badge bg-light text-dark">PowerFlex</span>
+                            <span class="badge bg-light text-dark">Allen-Bradley</span>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="https://www.rockwellautomation.com/en-us/support/documentation/security-advisories.html" class="btn btn-sm btn-outline-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Security Advisories
+                        </a>
+                        <a href="https://www.rockwellautomation.com/en-us/support/security.html" class="btn btn-sm btn-outline-secondary" target="_blank">
+                            <i class="fas fa-shield-alt me-1"></i>Security Support
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-info">
+                            <i class="fas fa-chart-bar me-1"></i>View Advisories
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- General Electric -->
+        <div class="col-lg-6 vendor-card" data-sector="energy manufacturing">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-atom fa-2x text-success"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title mb-1">General Electric (GE Digital)</h5>
+                            <small class="text-muted">Energy, Manufacturing</small>
+                        </div>
+                        <div class="ms-auto">
+                            <span class="badge bg-success">18 Advisories</span>
+                        </div>
+                    </div>
+                    
+                    <p class="card-text">
+                        Industrial software and digital solutions provider offering HMI/SCADA systems, historian software, and manufacturing execution systems.
+                    </p>
+                    
+                    <div class="mb-3">
+                        <h6>Key Products:</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark">iFIX</span>
+                            <span class="badge bg-light text-dark">Historian</span>
+                            <span class="badge bg-light text-dark">CIMPLICITY</span>
+                            <span class="badge bg-light text-dark">Proficy</span>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="https://www.ge.com/digital/security" class="btn btn-sm btn-outline-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Security Center
+                        </a>
+                        <a href="https://www.ge.com/digital/documentation/security-advisories" class="btn btn-sm btn-outline-secondary" target="_blank">
+                            <i class="fas fa-file-alt me-1"></i>Advisories
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-info">
+                            <i class="fas fa-chart-bar me-1"></i>View Advisories
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honeywell -->
+        <div class="col-lg-6 vendor-card" data-sector="energy manufacturing">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-microchip fa-2x text-secondary"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title mb-1">Honeywell</h5>
+                            <small class="text-muted">Energy, Manufacturing</small>
+                        </div>
+                        <div class="ms-auto">
+                            <span class="badge bg-secondary">15 Advisories</span>
+                        </div>
+                    </div>
+                    
+                    <p class="card-text">
+                        Technology and manufacturing leader providing control systems, safety systems, and industrial software solutions for process industries.
+                    </p>
+                    
+                    <div class="mb-3">
+                        <h6>Key Products:</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark">Experion PKS</span>
+                            <span class="badge bg-light text-dark">UniSim</span>
+                            <span class="badge bg-light text-dark">Forge</span>
+                            <span class="badge bg-light text-dark">Safety Manager</span>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="https://www.honeywell.com/us/en/cyber-security" class="btn btn-sm btn-outline-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Cyber Security
+                        </a>
+                        <a href="https://process.honeywell.com/us/en/site/security-advisories" class="btn btn-sm btn-outline-secondary" target="_blank">
+                            <i class="fas fa-bell me-1"></i>Security Alerts
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-info">
+                            <i class="fas fa-chart-bar me-1"></i>View Advisories
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Emerson -->
+        <div class="col-lg-6 vendor-card" data-sector="energy manufacturing">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="me-3">
+                            <i class="fas fa-project-diagram fa-2x text-primary"></i>
+                        </div>
+                        <div>
+                            <h5 class="card-title mb-1">Emerson</h5>
+                            <small class="text-muted">Energy, Manufacturing</small>
+                        </div>
+                        <div class="ms-auto">
+                            <span class="badge bg-primary">12 Advisories</span>
+                        </div>
+                    </div>
+                    
+                    <p class="card-text">
+                        Global technology and software solutions provider specializing in process automation, measurement, and analytical instrumentation.
+                    </p>
+                    
+                    <div class="mb-3">
+                        <h6>Key Products:</h6>
+                        <div class="d-flex flex-wrap gap-1">
+                            <span class="badge bg-light text-dark">DeltaV</span>
+                            <span class="badge bg-light text-dark">PlantWeb</span>
+                            <span class="badge bg-light text-dark">Fisher</span>
+                            <span class="badge bg-light text-dark">Rosemount</span>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a href="https://www.emerson.com/en-us/automation/cyber-security" class="btn btn-sm btn-outline-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Cyber Security
+                        </a>
+                        <a href="https://www.emerson.com/en-us/support/security-notifications" class="btn btn-sm btn-outline-secondary" target="_blank">
+                            <i class="fas fa-exclamation-triangle me-1"></i>Security Notifications
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-info">
+                            <i class="fas fa-chart-bar me-1"></i>View Advisories
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Resources Section -->
+    <div class="row mt-5">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-shield-alt me-2"></i>
+                Vendor Security Resources
+            </h3>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Security Response Teams</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <strong>Siemens ProductCERT:</strong> productcert@siemens.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <strong>Schneider Electric PSIRT:</strong> SEVD@schneider-electric.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <strong>Rockwell Automation:</strong> PSIRT@rockwellautomation.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <strong>GE Digital:</strong> ics-cert@ge.com
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <strong>Honeywell:</strong> ICS-CERT@honeywell.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header bg-info text-white">
+                    <h5 class="mb-0">Industry Resources</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="https://www.nist.gov/cyberframework" target="_blank" class="text-decoration-none">
+                                <i class="fas fa-external-link-alt me-2"></i>NIST Cybersecurity Framework
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards" target="_blank" class="text-decoration-none">
+                                <i class="fas fa-external-link-alt me-2"></i>IEC 62443 Standards
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://www.sans.org/industrial-control-systems/" target="_blank" class="text-decoration-none">
+                                <i class="fas fa-external-link-alt me-2"></i>SANS ICS Security
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://ics-cert.kaspersky.com/" target="_blank" class="text-decoration-none">
+                                <i class="fas fa-external-link-alt me-2"></i>Kaspersky ICS CERT
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="https://www.dragos.com/resource-center/" target="_blank" class="text-decoration-none">
+                                <i class="fas fa-external-link-alt me-2"></i>Dragos Resource Center
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('vendorSearch');
+    const sectorFilter = document.getElementById('sectorFilter');
+    const vendorCards = document.querySelectorAll('.vendor-card');
+
+    function filterVendors() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const selectedSector = sectorFilter.value;
+
+        vendorCards.forEach(card => {
+            const title = card.querySelector('.card-title').textContent.toLowerCase();
+            const sectors = card.dataset.sector;
+            
+            const matchesSearch = title.includes(searchTerm);
+            const matchesSector = selectedSector === 'all' || sectors.includes(selectedSector);
+            
+            if (matchesSearch && matchesSector) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    searchInput.addEventListener('input', filterVendors);
+    sectorFilter.addEventListener('change', filterVendors);
+});
+</script>

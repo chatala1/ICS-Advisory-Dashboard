@@ -1,0 +1,315 @@
+---
+layout: page
+title: Summaries & Downloads
+description: Access weekly summaries and downloadable CSV datasets for vulnerability analysis
+---
+
+<div class="container">
+    <!-- Summary Cards -->
+    <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="feature-icon text-primary">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h4>Latest Dataset</h4>
+                    <p class="text-muted mb-4">Complete ICS advisory database with all historical data</p>
+                    <a href="#" class="btn btn-primary" onclick="downloadSampleCSV('complete')">
+                        <i class="fas fa-download me-2"></i>Download Complete (CSV)
+                    </a>
+                    <small class="d-block mt-2 text-muted">Last updated: January 30, 2024</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="feature-icon text-warning">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>This Week</h4>
+                    <p class="text-muted mb-4">Recent advisories published in the last 7 days</p>
+                    <a href="#" class="btn btn-warning" onclick="downloadSampleCSV('weekly')">
+                        <i class="fas fa-download me-2"></i>Download Weekly (CSV)
+                    </a>
+                    <small class="d-block mt-2 text-muted">5 new advisories this week</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="feature-icon text-danger">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h4>Critical Only</h4>
+                    <p class="text-muted mb-4">High-priority vulnerabilities requiring immediate attention</p>
+                    <a href="#" class="btn btn-danger" onclick="downloadSampleCSV('critical')">
+                        <i class="fas fa-download me-2"></i>Download Critical (CSV)
+                    </a>
+                    <small class="d-block mt-2 text-muted">89 critical vulnerabilities</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Weekly Summaries -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-calendar-week me-2"></i>
+                Weekly Summaries
+            </h3>
+        </div>
+    </div>
+    
+    <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Week of January 29, 2024</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center mb-3">
+                        <div class="col-3">
+                            <div class="h4 text-danger">2</div>
+                            <small>Critical</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="h4 text-warning">5</div>
+                            <small>High</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="h4 text-info">3</div>
+                            <small>Medium</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="h4 text-success">1</div>
+                            <small>Low</small>
+                        </div>
+                    </div>
+                    
+                    <h6>Key Highlights:</h6>
+                    <ul class="mb-3">
+                        <li>Siemens SIMATIC critical vulnerabilities affecting S7-1200/1500</li>
+                        <li>Schneider Electric PowerLogic authentication bypass</li>
+                        <li>Multiple Rockwell Automation products affected</li>
+                    </ul>
+                    
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-primary">
+                            <i class="fas fa-eye me-1"></i>View Details
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary" onclick="downloadSampleCSV('week-01-29')">
+                            <i class="fas fa-download me-1"></i>Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">Week of January 22, 2024</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center mb-3">
+                        <div class="col-3">
+                            <div class="h4 text-danger">1</div>
+                            <small>Critical</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="h4 text-warning">3</div>
+                            <small>High</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="h4 text-info">6</div>
+                            <small>Medium</small>
+                        </div>
+                        <div class="col-3">
+                            <div class="h4 text-success">2</div>
+                            <small>Low</small>
+                        </div>
+                    </div>
+                    
+                    <h6>Key Highlights:</h6>
+                    <ul class="mb-3">
+                        <li>GE Digital iFIX remote code execution vulnerability</li>
+                        <li>Honeywell Experion PKS privilege escalation</li>
+                        <li>Multiple SCADA system vulnerabilities disclosed</li>
+                    </ul>
+                    
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-primary">
+                            <i class="fas fa-eye me-1"></i>View Details
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-secondary" onclick="downloadSampleCSV('week-01-22')">
+                            <i class="fas fa-download me-1"></i>Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Formats -->
+    <div class="row mb-5">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-file-alt me-2"></i>
+                Available Data Formats
+            </h3>
+        </div>
+    </div>
+    
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-file-csv fa-3x text-success mb-3"></i>
+                    <h5>CSV Format</h5>
+                    <p class="text-muted">Comma-separated values for spreadsheet applications and data analysis tools.</p>
+                    <div class="small text-muted">
+                        <strong>Fields included:</strong> Advisory ID, Title, Vendor, Products, CVSS Score, Severity, Publication Date, CVE IDs
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-code fa-3x text-info mb-3"></i>
+                    <h5>JSON Format</h5>
+                    <p class="text-muted">JavaScript Object Notation for API integration and web applications.</p>
+                    <div class="small text-muted">
+                        <strong>Coming Soon:</strong> Structured JSON data with nested objects for products and vulnerabilities
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body text-center">
+                    <i class="fas fa-file-code fa-3x text-warning mb-3"></i>
+                    <h5>XML Format</h5>
+                    <p class="text-muted">Extensible Markup Language for enterprise systems and SIEM integration.</p>
+                    <div class="small text-muted">
+                        <strong>Coming Soon:</strong> STIX/TAXII compatible format for threat intelligence platforms
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sample Data Preview -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-eye me-2"></i>
+                Sample Data Preview
+            </h3>
+            
+            <div class="card">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-sm table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Advisory ID</th>
+                                    <th>Title</th>
+                                    <th>Vendor</th>
+                                    <th>Products</th>
+                                    <th>CVSS</th>
+                                    <th>Severity</th>
+                                    <th>Published</th>
+                                    <th>CVE IDs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>ICSA-24-030-01</code></td>
+                                    <td>Siemens SIMATIC Products</td>
+                                    <td>Siemens</td>
+                                    <td>SIMATIC S7-1200, S7-1500</td>
+                                    <td>9.8</td>
+                                    <td><span class="badge bg-danger">Critical</span></td>
+                                    <td>2024-01-30</td>
+                                    <td>CVE-2024-1234, CVE-2024-1235</td>
+                                </tr>
+                                <tr>
+                                    <td><code>ICSA-24-029-02</code></td>
+                                    <td>Schneider Electric PowerLogic</td>
+                                    <td>Schneider Electric</td>
+                                    <td>PowerLogic PM8000</td>
+                                    <td>8.1</td>
+                                    <td><span class="badge bg-warning">High</span></td>
+                                    <td>2024-01-29</td>
+                                    <td>CVE-2024-1236</td>
+                                </tr>
+                                <tr>
+                                    <td><code>ICSA-24-028-03</code></td>
+                                    <td>Rockwell Automation FactoryTalk</td>
+                                    <td>Rockwell Automation</td>
+                                    <td>FactoryTalk View SE</td>
+                                    <td>6.5</td>
+                                    <td><span class="badge bg-info">Medium</span></td>
+                                    <td>2024-01-28</td>
+                                    <td>CVE-2024-1237</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="mt-3 text-center">
+                        <small class="text-muted">This is a preview of the first 3 rows. Complete datasets contain all available fields and historical data.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function downloadSampleCSV(type) {
+    // Sample CSV data based on type
+    let data = [];
+    let filename = '';
+    
+    switch(type) {
+        case 'complete':
+            filename = 'ics_advisories_complete.csv';
+            data = [
+                {id: 'ICSA-24-030-01', title: 'Siemens SIMATIC Products', vendor: 'Siemens', cvss: '9.8', severity: 'Critical', published: '2024-01-30'},
+                {id: 'ICSA-24-029-02', title: 'Schneider Electric PowerLogic', vendor: 'Schneider Electric', cvss: '8.1', severity: 'High', published: '2024-01-29'},
+                {id: 'ICSA-24-028-03', title: 'Rockwell Automation FactoryTalk', vendor: 'Rockwell Automation', cvss: '6.5', severity: 'Medium', published: '2024-01-28'}
+            ];
+            break;
+        case 'weekly':
+            filename = 'ics_advisories_weekly.csv';
+            data = [
+                {id: 'ICSA-24-030-01', title: 'Siemens SIMATIC Products', vendor: 'Siemens', cvss: '9.8', severity: 'Critical', published: '2024-01-30'},
+                {id: 'ICSA-24-029-02', title: 'Schneider Electric PowerLogic', vendor: 'Schneider Electric', cvss: '8.1', severity: 'High', published: '2024-01-29'}
+            ];
+            break;
+        case 'critical':
+            filename = 'ics_advisories_critical.csv';
+            data = [
+                {id: 'ICSA-24-030-01', title: 'Siemens SIMATIC Products', vendor: 'Siemens', cvss: '9.8', severity: 'Critical', published: '2024-01-30'}
+            ];
+            break;
+        default:
+            filename = 'ics_advisories_sample.csv';
+            data = [
+                {id: 'ICSA-24-030-01', title: 'Siemens SIMATIC Products', vendor: 'Siemens', cvss: '9.8', severity: 'Critical', published: '2024-01-30'}
+            ];
+    }
+    
+    downloadCSV(data, filename);
+}
+</script>
