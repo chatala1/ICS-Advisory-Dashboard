@@ -78,6 +78,21 @@ This site automatically deploys to GitHub Pages when changes are pushed to the m
 - **Font Awesome** - Icons
 - **GitHub Pages** - Hosting
 
+## External Resource Analysis
+
+This repository includes automated tools for analyzing external dependencies and generating allowlist permissions requests:
+
+```bash
+# Run external resource analysis
+./scripts/run_analysis.sh
+```
+
+The analysis generates:
+- **Detailed technical analysis** (`docs/external_resources_analysis.json`)
+- **Formatted allowlist request** (`docs/ALLOWLIST_REQUEST.md`)
+
+See [`scripts/README.md`](scripts/README.md) for detailed documentation.
+
 ## Contributing
 
 We welcome contributions! Here's how you can help:
