@@ -5,12 +5,13 @@ description: >-
   and provide downloadable CSV datasets for vulnerability analysis.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://chatala1.github.io" # the base hostname & protocol for your site
+url: "https://chatala1.github.io/ICS-Advisory-Dashboard" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
 theme: minima
+remote_theme: pages-themes/minimal@v0.2.0
 
 plugins:
   - jekyll-feed
