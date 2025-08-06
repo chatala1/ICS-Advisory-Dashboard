@@ -5,6 +5,7 @@
   --primary-color: #0077C8;     /* CISA Blue */
   --secondary-color: #002868;   /* DHS Navy Blue */
   --accent-color: #1e3a8a;      /* Government Blue */
+  --danger-color: #dc2626;      /* Critical/Danger Red */
   --success-color: #10b981;
   --warning-color: #f59e0b;
   --info-color: #0ea5e9;        /* Sky Blue */
@@ -231,7 +232,7 @@ html {
 }
 
 .bg-danger, .badge.bg-danger { 
-  background-color: var(--accent-color) !important;
+  background-color: var(--danger-color) !important;
   color: var(--text-primary) !important;
 }
 .bg-warning, .badge.bg-warning { 
@@ -258,9 +259,9 @@ html {
 }
 
 .alert-danger {
-  color: var(--accent-color);
-  background-color: rgba(239, 68, 68, 0.1);
-  border-color: rgba(239, 68, 68, 0.2);
+  color: var(--danger-color);
+  background-color: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.2);
 }
 
 .alert-warning {
