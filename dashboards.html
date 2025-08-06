@@ -1,0 +1,270 @@
+---
+layout: page
+title: Interactive Dashboards
+description: Visualize ICS advisory data through interactive charts and analytics
+---
+
+<div class="container">
+    <!-- Dashboard Controls -->
+    <div class="row mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Filter Options</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="severityFilter" class="form-label">Severity</label>
+                            <select class="form-select" id="severityFilter">
+                                <option value="all">All Severities</option>
+                                <option value="critical">Critical</option>
+                                <option value="high">High</option>
+                                <option value="medium">Medium</option>
+                                <option value="low">Low</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="vendorFilter" class="form-label">Vendor</label>
+                            <select class="form-select" id="vendorFilter">
+                                <option value="all">All Vendors</option>
+                                <option value="siemens">Siemens</option>
+                                <option value="schneider">Schneider Electric</option>
+                                <option value="rockwell">Rockwell Automation</option>
+                                <option value="ge">General Electric</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Quick Stats</h5>
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <div class="h4 text-danger">89</div>
+                            <small class="text-muted">Critical</small>
+                        </div>
+                        <div class="col-4">
+                            <div class="h4 text-warning">324</div>
+                            <small class="text-muted">High</small>
+                        </div>
+                        <div class="col-4">
+                            <div class="h4 text-info">456</div>
+                            <small class="text-muted">Medium</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row 1 -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-6">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-chart-pie me-2 text-primary"></i>
+                        Vulnerabilities by Severity
+                    </h5>
+                    <div class="chart-container">
+                        <canvas id="severityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-chart-line me-2 text-primary"></i>
+                        Advisory Timeline
+                    </h5>
+                    <div class="chart-container">
+                        <canvas id="timelineChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Charts Row 2 -->
+    <div class="row g-4 mb-4">
+        <div class="col-lg-8">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-chart-bar me-2 text-primary"></i>
+                        Top Affected Vendors
+                    </h5>
+                    <div class="chart-container">
+                        <canvas id="vendorChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card dashboard-card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-exclamation-triangle me-2 text-primary"></i>
+                        Alert Summary
+                    </h5>
+                    <div class="mt-3">
+                        <div class="alert alert-danger" role="alert">
+                            <strong>5 Critical</strong> advisories published this week
+                        </div>
+                        <div class="alert alert-warning" role="alert">
+                            <strong>12 High</strong> severity vulnerabilities identified
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            <strong>8 Vendors</strong> affected in latest batch
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h6>Most Active Sectors</h6>
+                        <ul class="list-unstyled">
+                            <li class="d-flex justify-content-between">
+                                <span>Energy</span>
+                                <span class="badge bg-danger">34</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>Manufacturing</span>
+                                <span class="badge bg-warning">28</span>
+                            </li>
+                            <li class="d-flex justify-content-between">
+                                <span>Water Systems</span>
+                                <span class="badge bg-info">19</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Interactive Table -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <i class="fas fa-table me-2 text-primary"></i>
+                        Recent Advisories
+                    </h5>
+                    
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Advisory ID</th>
+                                    <th>Title</th>
+                                    <th>Vendor</th>
+                                    <th>Severity</th>
+                                    <th>CVSS Score</th>
+                                    <th>Published</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>ICSA-24-030-01</code></td>
+                                    <td>Siemens SIMATIC Products</td>
+                                    <td>Siemens</td>
+                                    <td><span class="badge bg-danger">Critical</span></td>
+                                    <td>9.8</td>
+                                    <td>2024-01-30</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>ICSA-24-029-02</code></td>
+                                    <td>Schneider Electric PowerLogic</td>
+                                    <td>Schneider Electric</td>
+                                    <td><span class="badge bg-warning">High</span></td>
+                                    <td>8.1</td>
+                                    <td>2024-01-29</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>ICSA-24-028-03</code></td>
+                                    <td>Rockwell Automation FactoryTalk</td>
+                                    <td>Rockwell Automation</td>
+                                    <td><span class="badge bg-info">Medium</span></td>
+                                    <td>6.5</td>
+                                    <td>2024-01-28</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>ICSA-24-027-01</code></td>
+                                    <td>GE Digital iFIX</td>
+                                    <td>General Electric</td>
+                                    <td><span class="badge bg-warning">High</span></td>
+                                    <td>7.8</td>
+                                    <td>2024-01-27</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>ICSA-24-026-04</code></td>
+                                    <td>Honeywell Experion PKS</td>
+                                    <td>Honeywell</td>
+                                    <td><span class="badge bg-success">Low</span></td>
+                                    <td>4.3</td>
+                                    <td>2024-01-26</td>
+                                    <td>
+                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <small class="text-muted">Showing 5 of 1,247 advisories</small>
+                        <nav>
+                            <ul class="pagination pagination-sm mb-0">
+                                <li class="page-item disabled">
+                                    <span class="page-link">Previous</span>
+                                </li>
+                                <li class="page-item active">
+                                    <span class="page-link">1</span>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+// Main JavaScript for ICS Advisory Dashboard
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize tooltips
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    // Initialize sample charts if on dashboards page
+    if (document.getElementById('severityChart')) {
+        initializeSeverityChart();
+    }
+    
+    if (document.getElementById('timelineChart')) {
+        initializeTimelineChart();
+    }
+    
+    if (document.getElementById('vendorChart')) {
+        initializeVendorChart();
+    }
+});
+
+// Sample chart functions
+function initializeSeverityChart() {
+    const ctx = document.getElementById('severityChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Critical', 'High', 'Medium', 'Low'],
+            datasets: [{
+                data: [25, 45, 30, 15],
+                backgroundColor: [
+                    '#e53e3e',
+                    '#d69e2e',
+                    '#3182ce',
+                    '#38a169'
+                ]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Vulnerabilities by Severity'
+                }
+            }
+        }
+    });
+}
+
+function initializeTimelineChart() {
+    const ctx = document.getElementById('timelineChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+            datasets: [{
+                label: 'New Advisories',
+                data: [12, 19, 15, 25, 22, 30],
+                borderColor: '#3182ce',
+                backgroundColor: 'rgba(49, 130, 206, 0.1)',
+                tension: 0.4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Advisory Timeline (2024)'
+                }
+            }
+        }
+    });
+}
+
+function initializeVendorChart() {
+    const ctx = document.getElementById('vendorChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Siemens', 'Schneider Electric', 'Rockwell', 'GE', 'Honeywell'],
+            datasets: [{
+                label: 'Number of Advisories',
+                data: [35, 28, 22, 18, 15],
+                backgroundColor: '#3182ce'
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Top Affected Vendors'
+                }
+            }
+        }
+    });
+}
+
+// CSV download functionality
+function downloadCSV(data, filename) {
+    const csv = convertToCSV(data);
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.setAttribute('hidden', '');
+    a.setAttribute('href', url);
+    a.setAttribute('download', filename);
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
+function convertToCSV(data) {
+    const header = Object.keys(data[0]).join(',');
+    const rows = data.map(row => Object.values(row).join(','));
+    return [header, ...rows].join('\n');
+}

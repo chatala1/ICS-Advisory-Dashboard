@@ -1,0 +1,196 @@
+---
+layout: default
+title: ICS Advisory Dashboard
+description: Visualizing DHS CISA ICS Advisories and providing vulnerability analysis tools
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold mb-4">ICS Advisory Dashboard</h1>
+                <p class="lead mb-4">
+                    Open-source initiative to visualize DHS CISA ICS Advisories as interactive dashboards 
+                    and provide downloadable CSV datasets for vulnerability analysis.
+                </p>
+                <div class="d-flex gap-3 flex-wrap">
+                    <a href="/dashboards/" class="btn btn-light btn-lg">
+                        <i class="fas fa-chart-bar me-2"></i>View Dashboards
+                    </a>
+                    <a href="/summaries/" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-download me-2"></i>Download Data
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="text-center">
+                    <i class="fas fa-shield-alt" style="font-size: 8rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="container mb-5">
+    <div class="row g-4">
+        <div class="col-md-3">
+            <div class="card stats-card bg-primary text-white">
+                <div class="stats-number">1,247</div>
+                <div>Total Advisories</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stats-card bg-danger text-white">
+                <div class="stats-number">89</div>
+                <div>Critical Vulnerabilities</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stats-card bg-warning text-white">
+                <div class="stats-number">324</div>
+                <div>High Severity</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card stats-card bg-success text-white">
+                <div class="stats-number">156</div>
+                <div>Vendors Covered</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="container mb-5">
+    <div class="row text-center mb-5">
+        <div class="col-12">
+            <h2 class="display-5 fw-bold text-primary">Key Features</h2>
+            <p class="lead text-muted">Comprehensive tools for ICS security analysis</p>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 text-center p-4">
+                <div class="feature-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h4>Interactive Dashboards</h4>
+                <p class="text-muted">
+                    Visualize ICS advisory data through interactive charts and graphs for better understanding of trends and patterns.
+                </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 text-center p-4">
+                <div class="feature-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h4>Downloadable Datasets</h4>
+                <p class="text-muted">
+                    Access comprehensive CSV datasets for offline analysis and integration with your security tools.
+                </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 text-center p-4">
+                <div class="feature-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h4>API Integration</h4>
+                <p class="text-muted">
+                    Programmatic access to advisory data through well-documented APIs for automated workflows.
+                </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 text-center p-4">
+                <div class="feature-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h4>Vendor Resources</h4>
+                <p class="text-muted">
+                    Comprehensive directory of ICS vendors and their security resources for quick reference.
+                </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 text-center p-4">
+                <div class="feature-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h4>Security Tools</h4>
+                <p class="text-muted">
+                    Curated collection of tools and resources for ICS security assessment and monitoring.
+                </p>
+            </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 text-center p-4">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h4>Community Driven</h4>
+                <p class="text-muted">
+                    Open-source project with contributions from the cybersecurity community worldwide.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Updates Section -->
+<section class="container mb-5">
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">Recent Advisory Updates</h3>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h5 class="card-title">ICSA-24-030-01</h5>
+                        <span class="badge bg-danger">Critical</span>
+                    </div>
+                    <h6 class="card-subtitle mb-2 text-muted">Siemens SIMATIC Products</h6>
+                    <p class="card-text">
+                        Multiple vulnerabilities affecting SIMATIC S7-1200 and S7-1500 CPUs that could allow remote code execution.
+                    </p>
+                    <small class="text-muted">Published: January 30, 2024</small>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <h5 class="card-title">ICSA-24-029-02</h5>
+                        <span class="badge bg-warning">High</span>
+                    </div>
+                    <h6 class="card-subtitle mb-2 text-muted">Schneider Electric PowerLogic</h6>
+                    <p class="card-text">
+                        Authentication bypass vulnerability in PowerLogic PM8000 series power meters.
+                    </p>
+                    <small class="text-muted">Published: January 29, 2024</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <a href="/summaries/" class="btn btn-primary">View All Summaries</a>
+        </div>
+    </div>
+</section>

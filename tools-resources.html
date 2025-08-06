@@ -1,0 +1,492 @@
+---
+layout: page
+title: Tools & Resources
+description: Curated collection of security tools and resources for ICS environments
+---
+
+<div class="container">
+    <!-- Categories -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="btn-group flex-wrap" role="group" aria-label="Tool categories">
+                <input type="radio" class="btn-check" name="categoryFilter" id="all" value="all" checked>
+                <label class="btn btn-outline-primary" for="all">All Tools</label>
+
+                <input type="radio" class="btn-check" name="categoryFilter" id="scanning" value="scanning">
+                <label class="btn btn-outline-primary" for="scanning">Vulnerability Scanning</label>
+
+                <input type="radio" class="btn-check" name="categoryFilter" id="monitoring" value="monitoring">
+                <label class="btn btn-outline-primary" for="monitoring">Network Monitoring</label>
+
+                <input type="radio" class="btn-check" name="categoryFilter" id="forensics" value="forensics">
+                <label class="btn btn-outline-primary" for="forensics">Forensics</label>
+
+                <input type="radio" class="btn-check" name="categoryFilter" id="frameworks" value="frameworks">
+                <label class="btn btn-outline-primary" for="frameworks">Frameworks</label>
+
+                <input type="radio" class="btn-check" name="categoryFilter" id="training" value="training">
+                <label class="btn btn-outline-primary" for="training">Training</label>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vulnerability Scanning Tools -->
+    <div class="row g-4 mb-5 tool-category" data-category="scanning">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-search me-2"></i>
+                Vulnerability Scanning Tools
+            </h3>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-scanner fa-2x text-danger me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-1">Nessus Industrial Security</h5>
+                            <span class="badge bg-warning">Commercial</span>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Comprehensive vulnerability scanner with specialized plugins for industrial control systems and SCADA networks.
+                    </p>
+                    <div class="mb-3">
+                        <strong>Key Features:</strong>
+                        <ul class="small">
+                            <li>ICS protocol support (Modbus, DNP3, EtherNet/IP)</li>
+                            <li>Passive network discovery</li>
+                            <li>Policy compliance checking</li>
+                            <li>Custom vulnerability checks</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="https://www.tenable.com/products/nessus/industrial-security" class="btn btn-sm btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Learn More
+                        </a>
+                        <span class="btn btn-sm btn-outline-secondary disabled">
+                            <i class="fas fa-dollar-sign me-1"></i>Commercial
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-shield-alt fa-2x text-success me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-1">Redpoint</h5>
+                            <span class="badge bg-success">Open Source</span>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Digital forensics tool for industrial control systems with support for multiple ICS protocols and device fingerprinting.
+                    </p>
+                    <div class="mb-3">
+                        <strong>Key Features:</strong>
+                        <ul class="small">
+                            <li>Protocol analysis (Modbus, DNP3, CIP)</li>
+                            <li>Device fingerprinting</li>
+                            <li>Network topology mapping</li>
+                            <li>Incident response capabilities</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="https://github.com/digitalbond/Redpoint" class="btn btn-sm btn-primary" target="_blank">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                        <span class="btn btn-sm btn-outline-success disabled">
+                            <i class="fas fa-heart me-1"></i>Free
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Network Monitoring Tools -->
+    <div class="row g-4 mb-5 tool-category" data-category="monitoring">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-network-wired me-2"></i>
+                Network Monitoring Tools
+            </h3>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-eye fa-2x text-info me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-1">Wireshark</h5>
+                            <span class="badge bg-success">Open Source</span>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Network protocol analyzer with extensive support for industrial protocols and deep packet inspection capabilities.
+                    </p>
+                    <div class="mb-3">
+                        <strong>Supported Protocols:</strong>
+                        <div class="d-flex flex-wrap gap-1 mt-2">
+                            <span class="badge bg-light text-dark">Modbus</span>
+                            <span class="badge bg-light text-dark">DNP3</span>
+                            <span class="badge bg-light text-dark">EtherNet/IP</span>
+                            <span class="badge bg-light text-dark">PROFINET</span>
+                            <span class="badge bg-light text-dark">BACnet</span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="https://www.wireshark.org/" class="btn btn-sm btn-primary" target="_blank">
+                            <i class="fas fa-download me-1"></i>Download
+                        </a>
+                        <a href="https://github.com/wireshark/wireshark" class="btn btn-sm btn-outline-primary" target="_blank">
+                            <i class="fab fa-github me-1"></i>Source
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-chart-line fa-2x text-primary me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-1">Zeek (formerly Bro)</h5>
+                            <span class="badge bg-success">Open Source</span>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Powerful network analysis framework for comprehensive traffic analysis and security monitoring in ICS environments.
+                    </p>
+                    <div class="mb-3">
+                        <strong>Key Features:</strong>
+                        <ul class="small">
+                            <li>Real-time network monitoring</li>
+                            <li>Custom protocol parsers</li>
+                            <li>Anomaly detection</li>
+                            <li>Comprehensive logging</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="https://zeek.org/" class="btn btn-sm btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Website
+                        </a>
+                        <a href="https://github.com/zeek/zeek" class="btn btn-sm btn-outline-primary" target="_blank">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forensics Tools -->
+    <div class="row g-4 mb-5 tool-category" data-category="forensics">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-search-plus me-2"></i>
+                Digital Forensics Tools
+            </h3>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-microscope fa-2x text-warning me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-1">FLARE IDA Pro Scripts</h5>
+                            <span class="badge bg-success">Open Source</span>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Collection of IDA Pro scripts and plugins for reverse engineering and malware analysis in industrial environments.
+                    </p>
+                    <div class="mb-3">
+                        <strong>Applications:</strong>
+                        <ul class="small">
+                            <li>Malware analysis</li>
+                            <li>Firmware reverse engineering</li>
+                            <li>Protocol analysis</li>
+                            <li>Vulnerability research</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="https://github.com/fireeye/flare-ida" class="btn btn-sm btn-primary" target="_blank">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                        <span class="btn btn-sm btn-outline-info disabled">
+                            <i class="fas fa-tools me-1"></i>Scripts
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-database fa-2x text-secondary me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-1">Volatility Framework</h5>
+                            <span class="badge bg-success">Open Source</span>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Advanced memory forensics framework for extracting digital artifacts from volatile memory samples.
+                    </p>
+                    <div class="mb-3">
+                        <strong>Capabilities:</strong>
+                        <ul class="small">
+                            <li>Memory dump analysis</li>
+                            <li>Process and network forensics</li>
+                            <li>Registry analysis</li>
+                            <li>Timeline reconstruction</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="https://www.volatilityfoundation.org/" class="btn btn-sm btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Website
+                        </a>
+                        <a href="https://github.com/volatilityfoundation/volatility" class="btn btn-sm btn-outline-primary" target="_blank">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Security Frameworks -->
+    <div class="row g-4 mb-5 tool-category" data-category="frameworks">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-sitemap me-2"></i>
+                Security Frameworks & Standards
+            </h3>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-shield-alt fa-3x text-primary mb-3"></i>
+                    <h5>NIST Cybersecurity Framework</h5>
+                    <p class="text-muted">
+                        Comprehensive framework for improving critical infrastructure cybersecurity.
+                    </p>
+                    <a href="https://www.nist.gov/cyberframework" class="btn btn-outline-primary" target="_blank">
+                        <i class="fas fa-external-link-alt me-1"></i>Learn More
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-cog fa-3x text-info mb-3"></i>
+                    <h5>IEC 62443 Standards</h5>
+                    <p class="text-muted">
+                        International standards for security of industrial automation and control systems.
+                    </p>
+                    <a href="https://www.isa.org/standards-and-publications/isa-standards/isa-iec-62443-series-of-standards" class="btn btn-outline-info" target="_blank">
+                        <i class="fas fa-external-link-alt me-1"></i>Standards
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card h-100 text-center">
+                <div class="card-body">
+                    <i class="fas fa-crosshairs fa-3x text-danger mb-3"></i>
+                    <h5>MITRE ATT&CK for ICS</h5>
+                    <p class="text-muted">
+                        Knowledge base of adversary tactics and techniques for industrial control systems.
+                    </p>
+                    <a href="https://attack.mitre.org/matrices/ics/" class="btn btn-outline-danger" target="_blank">
+                        <i class="fas fa-external-link-alt me-1"></i>Matrix
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Training & Education -->
+    <div class="row g-4 mb-5 tool-category" data-category="training">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-graduation-cap me-2"></i>
+                Training & Education Resources
+            </h3>
+        </div>
+        
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-university fa-2x text-success me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-1">SANS ICS Training</h5>
+                            <span class="badge bg-warning">Commercial</span>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Comprehensive industrial control systems security training courses covering assessment, defense, and incident response.
+                    </p>
+                    <div class="mb-3">
+                        <strong>Course Offerings:</strong>
+                        <ul class="small">
+                            <li>ICS/SCADA Security Essentials (ICS410)</li>
+                            <li>ICS Security Assessment (ICS515)</li>
+                            <li>ICS Active Defense (ICS456)</li>
+                            <li>Industrial Network Security Monitoring (ICS418)</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="https://www.sans.org/industrial-control-systems/" class="btn btn-sm btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt me-1"></i>Courses
+                        </a>
+                        <span class="btn btn-sm btn-outline-warning disabled">
+                            <i class="fas fa-dollar-sign me-1"></i>Paid
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="fas fa-laptop-code fa-2x text-info me-3"></i>
+                        <div>
+                            <h5 class="card-title mb-1">Damn Vulnerable Chemical Process</h5>
+                            <span class="badge bg-success">Open Source</span>
+                        </div>
+                    </div>
+                    <p class="card-text">
+                        Simulated chemical plant for learning ICS security through hands-on practice in a safe virtual environment.
+                    </p>
+                    <div class="mb-3">
+                        <strong>Learning Objectives:</strong>
+                        <ul class="small">
+                            <li>ICS protocol understanding</li>
+                            <li>HMI manipulation techniques</li>
+                            <li>Process control fundamentals</li>
+                            <li>Attack and defense scenarios</li>
+                        </ul>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <a href="https://github.com/satejnik/DVCP-TE" class="btn btn-sm btn-primary" target="_blank">
+                            <i class="fab fa-github me-1"></i>GitHub
+                        </a>
+                        <span class="btn btn-sm btn-outline-success disabled">
+                            <i class="fas fa-heart me-1"></i>Free
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Resources -->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="text-primary mb-4">
+                <i class="fas fa-link me-2"></i>
+                Additional Resources
+            </h3>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-secondary text-white">
+                            <h6 class="mb-0">Community & Forums</h6>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    <a href="https://www.reddit.com/r/ICS/" target="_blank" class="text-decoration-none">
+                                        <i class="fab fa-reddit me-2"></i>r/ICS Reddit Community
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="https://ics-community.com/" target="_blank" class="text-decoration-none">
+                                        <i class="fas fa-users me-2"></i>ICS Security Community
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="https://www.linkedin.com/groups/1851780/" target="_blank" class="text-decoration-none">
+                                        <i class="fab fa-linkedin me-2"></i>LinkedIn ICS Security Group
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-info text-white">
+                            <h6 class="mb-0">Research & Intelligence</h6>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    <a href="https://www.dragos.com/threat-activity-groups/" target="_blank" class="text-decoration-none">
+                                        <i class="fas fa-users-cog me-2"></i>Dragos Threat Activity Groups
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="https://ics-cert.kaspersky.com/" target="_blank" class="text-decoration-none">
+                                        <i class="fas fa-shield-alt me-2"></i>Kaspersky ICS CERT
+                                    </a>
+                                </li>
+                                <li class="mb-2">
+                                    <a href="https://claroty.com/team82/" target="_blank" class="text-decoration-none">
+                                        <i class="fas fa-search me-2"></i>Claroty Team82 Research
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryRadios = document.querySelectorAll('input[name="categoryFilter"]');
+    const toolCategories = document.querySelectorAll('.tool-category');
+
+    function filterTools() {
+        const selectedCategory = document.querySelector('input[name="categoryFilter"]:checked').value;
+        
+        toolCategories.forEach(category => {
+            if (selectedCategory === 'all' || category.dataset.category === selectedCategory) {
+                category.style.display = 'block';
+            } else {
+                category.style.display = 'none';
+            }
+        });
+    }
+
+    categoryRadios.forEach(radio => {
+        radio.addEventListener('change', filterTools);
+    });
+
+    // Show all categories by default
+    filterTools();
+});
+</script>
