@@ -20,22 +20,22 @@ This request is for allowlisting external resources required for the ICS Advisor
 - Security: Enterprise-grade visualization library with strong security record
 
 **cdn.plot.ly**
-- URL: `https://cdn.plot.ly/plotly-latest.min.js``
+- URL: `https://cdn.plot.ly/plotly-latest.min.js```````
 - Purpose: Plotly.js for advanced interactive visualizations
 - Justification: Provides sophisticated data visualization capabilities for trend analysis
 - Security: Enterprise-grade visualization library with strong security record
 
 **cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js`
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css``
 - Purpose: Bootstrap CSS/JS framework for responsive design and UI components
 - Justification: Core frontend framework required for site layout and functionality
 - Security: Well-established CDN with SRI hash verification available
 
-**cdnjs.cloudflare.com**
-- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css`````
-- Purpose: Font Awesome icon library for UI icons
-- Justification: Provides standardized icons throughout the dashboard interface
-- Security: Trusted CDN with wide adoption in enterprise environments
+**cdn.plot.ly**
+- URL: `https://cdn.plot.ly/plotly-latest.min.js````````
+- Purpose: Plotly.js for advanced interactive visualizations
+- Justification: Provides sophisticated data visualization capabilities for trend analysis
+- Security: Enterprise-grade visualization library with strong security record
 
 **cdn.jsdelivr.net**
 - URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js``````
@@ -44,10 +44,22 @@ This request is for allowlisting external resources required for the ICS Advisor
 - Security: Well-established CDN with SRI hash verification available
 
 **cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css```
-- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
-- Justification: Core frontend framework required for site layout and functionality
-- Security: Well-established CDN with SRI hash verification available
+- URL: `https://cdn.jsdelivr.net/npm/chart.js````
+- Purpose: Chart.js library for data visualization
+- Justification: Essential for rendering interactive charts and graphs of advisory data
+- Security: Open-source charting library with active security maintenance
+
+**cdnjs.cloudflare.com**
+- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css````
+- Purpose: Font Awesome icon library for UI icons
+- Justification: Provides standardized icons throughout the dashboard interface
+- Security: Trusted CDN with wide adoption in enterprise environments
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/chart.js```````
+- Purpose: Chart.js library for data visualization
+- Justification: Essential for rendering interactive charts and graphs of advisory data
+- Security: Open-source charting library with active security maintenance
 
 **cdnjs.cloudflare.com**
 - URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css```
@@ -55,8 +67,32 @@ This request is for allowlisting external resources required for the ICS Advisor
 - Justification: Provides standardized icons throughout the dashboard interface
 - Security: Trusted CDN with wide adoption in enterprise environments
 
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/chart.js``
+- Purpose: Chart.js library for data visualization
+- Justification: Essential for rendering interactive charts and graphs of advisory data
+- Security: Open-source charting library with active security maintenance
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js````````
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/chart.js`````
+- Purpose: Chart.js library for data visualization
+- Justification: Essential for rendering interactive charts and graphs of advisory data
+- Security: Open-source charting library with active security maintenance
+
+**cdn.plot.ly**
+- URL: `https://cdn.plot.ly/plotly-latest.min.js`
+- Purpose: Plotly.js for advanced interactive visualizations
+- Justification: Provides sophisticated data visualization capabilities for trend analysis
+- Security: Enterprise-grade visualization library with strong security record
+
 **cdnjs.cloudflare.com**
-- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css``
+- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css```````
 - Purpose: Font Awesome icon library for UI icons
 - Justification: Provides standardized icons throughout the dashboard interface
 - Security: Trusted CDN with wide adoption in enterprise environments
@@ -68,10 +104,34 @@ This request is for allowlisting external resources required for the ICS Advisor
 - Security: Enterprise-grade visualization library with strong security record
 
 **cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/chart.js``
-- Purpose: Chart.js library for data visualization
-- Justification: Essential for rendering interactive charts and graphs of advisory data
-- Security: Open-source charting library with active security maintenance
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css`````
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css```````
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css```
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
+
+**cdnjs.cloudflare.com**
+- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css``
+- Purpose: Font Awesome icon library for UI icons
+- Justification: Provides standardized icons throughout the dashboard interface
+- Security: Trusted CDN with wide adoption in enterprise environments
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js`````
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
 
 **cdnjs.cloudflare.com**
 - URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css``````
@@ -79,8 +139,38 @@ This request is for allowlisting external resources required for the ICS Advisor
 - Justification: Provides standardized icons throughout the dashboard interface
 - Security: Trusted CDN with wide adoption in enterprise environments
 
+**cdn.plot.ly**
+- URL: `https://cdn.plot.ly/plotly-latest.min.js``
+- Purpose: Plotly.js for advanced interactive visualizations
+- Justification: Provides sophisticated data visualization capabilities for trend analysis
+- Security: Enterprise-grade visualization library with strong security record
+
 **cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css``
+- URL: `https://cdn.jsdelivr.net/npm/chart.js`
+- Purpose: Chart.js library for data visualization
+- Justification: Essential for rendering interactive charts and graphs of advisory data
+- Security: Open-source charting library with active security maintenance
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js````
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
+
+**cdn.plot.ly**
+- URL: `https://cdn.plot.ly/plotly-latest.min.js````
+- Purpose: Plotly.js for advanced interactive visualizations
+- Justification: Provides sophisticated data visualization capabilities for trend analysis
+- Security: Enterprise-grade visualization library with strong security record
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css``````
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css````
 - Purpose: Bootstrap CSS/JS framework for responsive design and UI components
 - Justification: Core frontend framework required for site layout and functionality
 - Security: Well-established CDN with SRI hash verification available
@@ -92,40 +182,10 @@ This request is for allowlisting external resources required for the ICS Advisor
 - Security: Well-established CDN with SRI hash verification available
 
 **cdnjs.cloudflare.com**
-- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css`
+- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css`````
 - Purpose: Font Awesome icon library for UI icons
 - Justification: Provides standardized icons throughout the dashboard interface
 - Security: Trusted CDN with wide adoption in enterprise environments
-
-**cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/chart.js````
-- Purpose: Chart.js library for data visualization
-- Justification: Essential for rendering interactive charts and graphs of advisory data
-- Security: Open-source charting library with active security maintenance
-
-**cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/chart.js`
-- Purpose: Chart.js library for data visualization
-- Justification: Essential for rendering interactive charts and graphs of advisory data
-- Security: Open-source charting library with active security maintenance
-
-**cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/chart.js`````
-- Purpose: Chart.js library for data visualization
-- Justification: Essential for rendering interactive charts and graphs of advisory data
-- Security: Open-source charting library with active security maintenance
-
-**cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css`````
-- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
-- Justification: Core frontend framework required for site layout and functionality
-- Security: Well-established CDN with SRI hash verification available
-
-**cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css````
-- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
-- Justification: Core frontend framework required for site layout and functionality
-- Security: Well-established CDN with SRI hash verification available
 
 **cdn.plot.ly**
 - URL: `https://cdn.plot.ly/plotly-latest.min.js``````
@@ -134,49 +194,19 @@ This request is for allowlisting external resources required for the ICS Advisor
 - Security: Enterprise-grade visualization library with strong security record
 
 **cdnjs.cloudflare.com**
-- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css````
+- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css`
 - Purpose: Font Awesome icon library for UI icons
 - Justification: Provides standardized icons throughout the dashboard interface
 - Security: Trusted CDN with wide adoption in enterprise environments
 
-**cdn.plot.ly**
-- URL: `https://cdn.plot.ly/plotly-latest.min.js````
-- Purpose: Plotly.js for advanced interactive visualizations
-- Justification: Provides sophisticated data visualization capabilities for trend analysis
-- Security: Enterprise-grade visualization library with strong security record
-
-**cdn.plot.ly**
-- URL: `https://cdn.plot.ly/plotly-latest.min.js`
-- Purpose: Plotly.js for advanced interactive visualizations
-- Justification: Provides sophisticated data visualization capabilities for trend analysis
-- Security: Enterprise-grade visualization library with strong security record
-
 **cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js``
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css````````
 - Purpose: Bootstrap CSS/JS framework for responsive design and UI components
 - Justification: Core frontend framework required for site layout and functionality
 - Security: Well-established CDN with SRI hash verification available
 
 **cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css``````
-- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
-- Justification: Core frontend framework required for site layout and functionality
-- Security: Well-established CDN with SRI hash verification available
-
-**cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js````
-- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
-- Justification: Core frontend framework required for site layout and functionality
-- Security: Well-established CDN with SRI hash verification available
-
-**cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js`````
-- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
-- Justification: Core frontend framework required for site layout and functionality
-- Security: Well-established CDN with SRI hash verification available
-
-**cdn.jsdelivr.net**
-- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css`
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js`
 - Purpose: Bootstrap CSS/JS framework for responsive design and UI components
 - Justification: Core frontend framework required for site layout and functionality
 - Security: Well-established CDN with SRI hash verification available
@@ -188,7 +218,37 @@ This request is for allowlisting external resources required for the ICS Advisor
 - Security: Open-source charting library with active security maintenance
 
 **cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css`
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js``
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
+
+**cdnjs.cloudflare.com**
+- URL: `https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css````````
+- Purpose: Font Awesome icon library for UI icons
+- Justification: Provides standardized icons throughout the dashboard interface
+- Security: Trusted CDN with wide adoption in enterprise environments
+
+**cdn.jsdelivr.net**
 - URL: `https://cdn.jsdelivr.net/npm/chart.js```
+- Purpose: Chart.js library for data visualization
+- Justification: Essential for rendering interactive charts and graphs of advisory data
+- Security: Open-source charting library with active security maintenance
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js```````
+- Purpose: Bootstrap CSS/JS framework for responsive design and UI components
+- Justification: Core frontend framework required for site layout and functionality
+- Security: Well-established CDN with SRI hash verification available
+
+**cdn.jsdelivr.net**
+- URL: `https://cdn.jsdelivr.net/npm/chart.js````````
 - Purpose: Chart.js library for data visualization
 - Justification: Essential for rendering interactive charts and graphs of advisory data
 - Security: Open-source charting library with active security maintenance
@@ -204,19 +264,19 @@ This request is for allowlisting external resources required for the ICS Advisor
 ### Government and Standards Organizations
 
 **cisa.gov**
-- URLs: `https://www.cisa.gov/uscert/ics/advisories`,`, `https://www.cisa.gov/known-exploited-vulnerabilities-catalog`, `https://www.cisa.gov/uscert/ics/advisories`,`,`
+- URLs: `https://www.cisa.gov/uscert/ics/advisories`,`, `https://www.cisa.gov/uscert/ics/advisories`, `https://www.cisa.gov/known-exploited-vulnerabilities-catalog`,``
 - Purpose: DHS Cybersecurity & Infrastructure Security Agency
 - Justification: Official government cybersecurity data sources for ICS advisories and vulnerability intelligence
 - Security: Trusted government sources with authoritative cybersecurity data
 
 **nist.gov**
-- URLs: `https://nvd.nist.gov/`,`,`,`,`,`, `https://nvd.nist.gov/developers```,`, `https://nvd.nist.gov/developers`
+- URLs: `https://nvd.nist.gov/developers```,`,`, `https://nvd.nist.gov/developers`, `https://www.nist.gov/cyberframework`
 - Purpose: National Institute of Standards and Technology
 - Justification: Official government cybersecurity data sources for ICS advisories and vulnerability intelligence
 - Security: Trusted government sources with authoritative cybersecurity data
 
 **mitre.org**
-- URLs: `https://attack.mitre.org/`, `https://attack.mitre.org/``, `https://attack.mitre.org/matrices/ics/`
+- URLs: `https://cve.mitre.org/`, `https://attack.mitre.org/matrices/ics/`, `https://cve.mitre.org/``
 - Purpose: MITRE Corporation - CVE Database and ATT&CK Framework
 - Justification: Official government cybersecurity data sources for ICS advisories and vulnerability intelligence
 - Security: Trusted government sources with authoritative cybersecurity data
