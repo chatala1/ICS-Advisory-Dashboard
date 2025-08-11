@@ -1,6 +1,11 @@
 // Main JavaScript for ICS Advisory Dashboard
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Lucide icons (Swift UI-style icons)
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
     // Initialize tooltips (with error handling for missing Bootstrap)
     if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));

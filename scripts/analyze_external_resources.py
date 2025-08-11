@@ -307,6 +307,14 @@ This request is for allowlisting external resources required for the ICS Advisor
 - Justification: Provides sophisticated data visualization capabilities for trend analysis
 - Security: Enterprise-grade visualization library with strong security record
 """
+            elif 'lucide' in url:
+                template += f"""
+**{domain}**
+- URL: `{url}`
+- Purpose: Lucide Icons - Swift UI-style icon library
+- Justification: Modern, clean icons for enhanced user interface design
+- Security: Open-source icon library with consistent maintenance and updates
+"""
     
     template += """
 ### Hosting Platform
