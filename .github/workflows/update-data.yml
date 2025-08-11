@@ -1,0 +1,69 @@
+name: Update ICS Advisory Data
+
+on:
+  # Run daily at 6:00 AM UTC to check for new advisories
+  schedule:
+    - cron: '0 6 * * *'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+  
+  # Run on push to main branch
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/update_data.sh'
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Update ICS Advisory data
+      run: |
+        cd $GITHUB_WORKSPACE
+        chmod +x scripts/update_data.sh
+        ./scripts/update_data.sh
+    
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: Commit and push changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add ICS-CERT_ADV/
+        git commit -m "🤖 Auto-update ICS Advisory data - $(date +%Y-%m-%d)"
+        git push
+    
+    - name: Create summary
+      run: |
+        echo "## 📊 ICS Advisory Data Update" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        if [ -f "ICS-CERT_ADV/CISA_ICS_ADV_Master.csv" ]; then
+          file_size=$(du -h ICS-CERT_ADV/CISA_ICS_ADV_Master.csv | cut -f1)
+          record_count=$(tail -n +2 ICS-CERT_ADV/CISA_ICS_ADV_Master.csv | wc -l 2>/dev/null || echo "0")
+          echo "- **File size**: $file_size" >> $GITHUB_STEP_SUMMARY
+          echo "- **Total records**: $record_count" >> $GITHUB_STEP_SUMMARY
+          echo "- **Last updated**: $(date)" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- ❌ Data file not found" >> $GITHUB_STEP_SUMMARY
+        fi
+        echo "" >> $GITHUB_STEP_SUMMARY
+        if [ "${{ steps.verify-changed-files.outputs.changed }}" == "true" ]; then
+          echo "✅ **Data was updated and committed**" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "ℹ️ **No changes detected - data is up to date**" >> $GITHUB_STEP_SUMMARY
+        fi
