@@ -4,6 +4,11 @@ title: Interactive Dashboards
 description: Visualize ICS advisory data through interactive charts and analytics
 ---
 
+<!-- Load Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Load Dashboard JavaScript -->
+<script src="{{ '/assets/js/dashboard.js' | relative_url }}"></script>
+
 <div class="container">
     <!-- Dashboard Controls -->
     <div class="row mb-4">
@@ -159,7 +164,7 @@ description: Visualize ICS advisory data through interactive charts and analytic
                     </h5>
                     
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table id="advisoryTable" class="table table-hover">
                             <thead class="table-dark">
                                 <tr>
                                     <th>Advisory ID</th>
@@ -173,69 +178,7 @@ description: Visualize ICS advisory data through interactive charts and analytic
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><code>ICSA-24-030-01</code></td>
-                                    <td>Siemens SIMATIC Products</td>
-                                    <td>Siemens</td>
-                                    <td><span class="badge bg-danger">Critical</span></td>
-                                    <td>9.8</td>
-                                    <td>2024-01-30</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
-                                            <i class="fas fa-eye"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><code>ICSA-24-029-02</code></td>
-                                    <td>Schneider Electric PowerLogic</td>
-                                    <td>Schneider Electric</td>
-                                    <td><span class="badge bg-warning">High</span></td>
-                                    <td>8.1</td>
-                                    <td>2024-01-29</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
-                                            <i class="fas fa-eye"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><code>ICSA-24-028-03</code></td>
-                                    <td>Rockwell Automation FactoryTalk</td>
-                                    <td>Rockwell Automation</td>
-                                    <td><span class="badge bg-info">Medium</span></td>
-                                    <td>6.5</td>
-                                    <td>2024-01-28</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
-                                            <i class="fas fa-eye"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><code>ICSA-24-027-01</code></td>
-                                    <td>GE Digital iFIX</td>
-                                    <td>General Electric</td>
-                                    <td><span class="badge bg-warning">High</span></td>
-                                    <td>7.8</td>
-                                    <td>2024-01-27</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
-                                            <i class="fas fa-eye"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><code>ICSA-24-026-04</code></td>
-                                    <td>Honeywell Experion PKS</td>
-                                    <td>Honeywell</td>
-                                    <td><span class="badge bg-success">Low</span></td>
-                                    <td>4.3</td>
-                                    <td>2024-01-26</td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-outline-primary" data-bs-toggle="tooltip" title="View Details">
-                                            <i class="fas fa-eye"></i>
-                                        </a>
-                                    </td>
+                                    <td colspan="7" class="text-center">Loading data...</td>
                                 </tr>
                             </tbody>
                         </table>

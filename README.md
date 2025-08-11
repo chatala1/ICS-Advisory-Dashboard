@@ -6,12 +6,15 @@ An open-source initiative to visualize DHS CISA ICS Advisories as interactive da
 
 ## Features
 
-- 📊 **Interactive Dashboards** - Visualize ICS advisory data through charts and analytics
-- 📁 **Downloadable Datasets** - Access CSV data for offline analysis
+- 📊 **Interactive Dashboards** - Real-time visualization of CISA ICS advisory data through charts and analytics
+- 📁 **Downloadable Datasets** - Access to live CSV data for offline analysis
+- 🔄 **Automatic Data Updates** - Daily synchronization with latest CISA ICS advisories
 - 🔗 **API Integration** - Programmatic access to advisory data
 - 🏭 **Vendor Resources** - Comprehensive directory of ICS vendors
 - 🛠️ **Security Tools** - Curated collection of ICS security tools
 - 📚 **Training Resources** - Educational materials and community links
+- 📈 **Live Statistics** - Real-time counts and trend analysis
+- 🎯 **Advanced Filtering** - Filter by severity, vendor, date range, and more
 
 ## Quick Start
 
@@ -59,7 +62,15 @@ This site automatically deploys to GitHub Pages when changes are pushed to the m
 ├── _includes/         # Reusable components
 ├── _sass/            # Custom styles
 ├── assets/           # CSS, JS, images
+│   └── js/           # JavaScript files
+│       └── dashboard.js  # Interactive dashboard functionality
 ├── data/             # Sample CSV datasets
+├── ICS-CERT_ADV/     # CISA ICS Advisory data files
+│   └── CISA_ICS_ADV_Master.csv  # Master dataset (auto-updated)
+├── scripts/          # Data update and analysis scripts
+│   └── update_data.sh    # Data update script
+├── .github/workflows/    # GitHub Actions
+│   └── update-data.yml   # Automated data updates
 ├── index.html        # Homepage
 ├── dashboards.html   # Interactive dashboards
 ├── summaries.html    # Data downloads
@@ -108,6 +119,29 @@ We welcome contributions! Here's how you can help:
 - Test changes locally before submitting PRs
 - Update documentation for new features
 - Use semantic commit messages
+
+## Data Updates
+
+The dashboard automatically updates its data daily through GitHub Actions. You can also manually update the data:
+
+### Manual Data Update
+
+```bash
+# Run the update script
+./scripts/update_data.sh
+```
+
+### Automated Updates
+
+- **Daily Schedule**: 6:00 AM UTC
+- **Manual Trigger**: Via GitHub Actions tab
+- **Auto-commit**: Changes are automatically committed to the repository
+
+The update process:
+1. Downloads the latest `CISA_ICS_ADV_Master.csv` from the source repository
+2. Validates the data integrity
+3. Updates statistics and timestamps
+4. Commits changes if new data is detected
 
 ## Data Sources
 
